@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "express": "^4.21.3",
-    "jsonwebtoken": "^9.1.0",
+    "jsonwebtoken": "^9.0.1",
     "rate-limiter-flexible": "^5.0.0"
   },
   "devDependencies": {
