@@ -1,0 +1,18 @@
+{
+  "id": "shader-cache-cleanup",
+  "name": "Shader Cache Cleanup",
+  "category": "GPU",
+  "description": "Removes stale shader cache files in a controlled way.",
+  "whyItHelps": "Can improve storage usage and reduce stale graphics artifacts.",
+  "supportedWindows": ["10", "11"],
+  "riskLevel": "Low",
+  "requiresAdmin": true,
+  "isSafe": true,
+  "isReversible": true,
+  "enableScriptPath": "Enable.ps1",
+  "disableScriptPath": "Disable.ps1",
+  "restoreScriptPath": "Restore.ps1",
+  "registryPath": "HKCU\\Software\\ArkSuite\\Tweaks\\GPU",
+  "readmePath": "README.md",
+  "modulePath": "Modules/GPU/ShaderCacheCleanup"
+}

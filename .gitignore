@@ -1,0 +1,20 @@
+# Build output
+bin/
+obj/
+out/
+
+# Node
+node_modules/
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# Local environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vs/
+.vscode/

@@ -1,0 +1,18 @@
+{
+  "id": "standby-list-cleaner",
+  "name": "Standby List Cleaner",
+  "category": "Memory",
+  "description": "Provides a safe standby list cleanup routine for memory pressure scenarios.",
+  "whyItHelps": "Can improve responsiveness when memory pressure is high and the system is idle.",
+  "supportedWindows": ["10", "11"],
+  "riskLevel": "Medium",
+  "requiresAdmin": true,
+  "isSafe": true,
+  "isReversible": true,
+  "enableScriptPath": "Enable.ps1",
+  "disableScriptPath": "Disable.ps1",
+  "restoreScriptPath": "Restore.ps1",
+  "registryPath": "HKCU\\Software\\ArkSuite\\Tweaks\\Memory",
+  "readmePath": "README.md",
+  "modulePath": "Modules/Memory/StandbyListCleaner"
+}

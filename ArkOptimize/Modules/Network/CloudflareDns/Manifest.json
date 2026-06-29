@@ -1,0 +1,18 @@
+{
+  "id": "cloudflare-dns",
+  "name": "Cloudflare DNS",
+  "category": "Network",
+  "description": "Applies Cloudflare DNS settings safely.",
+  "whyItHelps": "Can improve privacy and provide low-latency DNS resolution on supported networks.",
+  "supportedWindows": ["10", "11"],
+  "riskLevel": "Low",
+  "requiresAdmin": true,
+  "isSafe": true,
+  "isReversible": true,
+  "enableScriptPath": "Enable.bat",
+  "disableScriptPath": "Disable.bat",
+  "restoreScriptPath": "Restore.reg",
+  "registryPath": "HKCU\\Software\\ArkSuite\\Tweaks\\Network",
+  "readmePath": "README.md",
+  "modulePath": "Modules/Network/CloudflareDns"
+}

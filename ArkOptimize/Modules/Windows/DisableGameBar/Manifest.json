@@ -1,0 +1,18 @@
+{
+  "id": "disable-game-bar",
+  "name": "Disable Game Bar",
+  "category": "Windows",
+  "description": "Disables Game Bar and Game DVR features safely.",
+  "whyItHelps": "Reduces background overhead and interruptions during gaming sessions.",
+  "supportedWindows": ["10", "11"],
+  "riskLevel": "Low",
+  "requiresAdmin": true,
+  "isSafe": true,
+  "isReversible": true,
+  "enableScriptPath": "Enable.bat",
+  "disableScriptPath": "Disable.bat",
+  "restoreScriptPath": "Restore.reg",
+  "registryPath": "HKCU\\Software\\ArkSuite\\Tweaks\\Windows",
+  "readmePath": "README.md",
+  "modulePath": "Modules/Windows/DisableGameBar"
+}

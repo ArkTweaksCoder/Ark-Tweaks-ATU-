@@ -1,0 +1,18 @@
+{
+  "id": "cpu-priority",
+  "name": "CPU Priority Management",
+  "category": "CPU",
+  "description": "Provides safe CPU priority guidance for gaming and productivity tasks.",
+  "whyItHelps": "Helps reduce contention and improve responsiveness for selected workloads.",
+  "supportedWindows": ["10", "11"],
+  "riskLevel": "Low",
+  "requiresAdmin": true,
+  "isSafe": true,
+  "isReversible": true,
+  "enableScriptPath": "Enable.ps1",
+  "disableScriptPath": "Disable.ps1",
+  "restoreScriptPath": "Restore.ps1",
+  "registryPath": "HKCU\\Software\\ArkSuite\\Tweaks\\CPU",
+  "readmePath": "README.md",
+  "modulePath": "Modules/CPU/CpuPriority"
+}
