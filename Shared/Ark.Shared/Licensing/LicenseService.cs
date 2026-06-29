@@ -25,4 +25,18 @@ public sealed class LicenseService
             ProductName = "Ark Optimize"
         };
     }
+
+    public LicenseModel CreateDemoFallbackLicense(string email)
+    {
+        return new LicenseModel
+        {
+            UserEmail = email,
+            LicenseKey = "ARK-DEMO-FALLBACK",
+            Tier = LicenseTier.Free,
+            IsActive = true,
+            ExpiresAt = DateTimeOffset.UtcNow.AddDays(7),
+            MachineFingerprint = "local-demo",
+            ProductName = "Ark Optimize"
+        };
+    }
 }

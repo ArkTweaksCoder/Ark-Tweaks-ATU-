@@ -1,0 +1,7 @@
+{
+  "id": "reduce-animations",
+  "name": "Reduce Animations",
+  "category": "Windows",
+  "description": "Disables or reduces Windows UI animations for a snappier experience.",
+  "script": "Enable.bat"
+}

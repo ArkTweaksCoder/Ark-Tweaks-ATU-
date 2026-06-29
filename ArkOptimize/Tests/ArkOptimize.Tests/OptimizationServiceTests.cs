@@ -25,4 +25,15 @@ public class OptimizationServiceTests
         Assert.Equal("restore-gaming", plan.Id);
         Assert.Contains(plan.TweakIds, id => id == "gaming-ultimate-performance");
     }
+
+    [Fact]
+    public void ExecuteProfile_FindsExecutableModulesForKnownTweaks()
+    {
+        var service = new OptimizationService();
+        var modulesRoot = Path.GetFullPath(service.ResolveModulesRoot());
+
+        var results = service.ExecuteProfile("gaming", modulesRoot);
+
+        Assert.Contains(results, result => result.Contains("Ultimate Performance", StringComparison.OrdinalIgnoreCase));
+    }
 }

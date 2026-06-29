@@ -1,7 +1,6 @@
 ﻿using Ark.Shared.Contracts;
 using Ark.Shared.Licensing;
 using Ark.Shared.Models;
-using Ark.Shared.Tweaks;
 using ArkOptimize.App;
 
 var validator = new SafetyValidator();
@@ -15,7 +14,7 @@ var snapshot = new HealthSnapshot(
     48.0,
     61.2,
     18.0,
-    "Pro");
+    "Demo Mode");
 
 var action = new OptimizationAction(
     "Gaming Profile",
@@ -28,14 +27,23 @@ var action = new OptimizationAction(
 
 var tweaks = service.GetTweaksForProfile("gaming");
 var restorePlan = service.BuildRestorePlan("gaming");
-var license = licenseService.CreateDemoLicense("user@example.com");
+var license = licenseService.CreateDemoFallbackLicense("local@example.com");
+var resolvedModulesRoot = Path.GetFullPath(service.ResolveModulesRoot());
+var executionResults = service.ExecuteProfile("gaming", resolvedModulesRoot);
 
-Console.WriteLine($"Ark Optimize ready. License: {snapshot.LicenseStatus}");
+Console.WriteLine("Ark Optimize ready.");
+Console.WriteLine($"License: {snapshot.LicenseStatus}");
 Console.WriteLine($"Safety validation: {validator.Validate(action)}");
 Console.WriteLine($"Loaded {tweaks.Count} tweak(s) for profile 'gaming'.");
 Console.WriteLine($"Restore plan created: {restorePlan.Name}");
 Console.WriteLine($"Dashboard shell: {shell.Title} - {shell.Subtitle}");
 Console.WriteLine($"Activation state: {license.IsActive} ({license.Tier})");
+Console.WriteLine("Demo mode enabled: tweaks can run without a paid license.");
+Console.WriteLine("Executing available tweak scripts...");
+foreach (var result in executionResults)
+{
+    Console.WriteLine(result);
+}
 
 public sealed class SafetyValidator : ISafetyValidator
 {
